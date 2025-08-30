@@ -20,7 +20,7 @@ void loop()
 {
   // put your main code here, to run repeatedly:
   digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);
+  delayMicroseconds(200);
 
   digitalWrite(trigPin, HIGH);
   delayMicroseconds(2);
