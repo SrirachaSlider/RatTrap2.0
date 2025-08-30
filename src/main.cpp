@@ -20,7 +20,7 @@ void loop()
 {
   // put your main code here, to run repeatedly:
   digitalWrite(trigPin, LOW);
-  delayMicroseconds(200);
+  delayMicroseconds(2);
 
   digitalWrite(trigPin, HIGH);
   delayMicroseconds(2);
@@ -28,7 +28,7 @@ void loop()
 
   duration = pulseIn(echoPin, HIGH);
 
-  distance = duration * 0.034 / 2;
+  distance = (duration / 29) / 2; // cm
 
   Serial.print("Distance: ");
   Serial.println(distance);
