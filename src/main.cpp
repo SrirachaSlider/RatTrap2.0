@@ -1,8 +1,6 @@
 #include <Arduino.h>
 
 // Declare our variables
-long duration;
-int distance;
 
 // Pin definitions
 const int IR_SENSOR_PIN = 2;
@@ -13,8 +11,8 @@ const int trigPin = 7;
 const int echoPin = 6;
 
 // Constants
-// const int ACTUATION_TIME = 2000;
-// const int DEBOUNCE_DELAY = 50;
+const int ACTUATION_TIME = 2000;
+const int DEBOUNCE_DELAY = 50;
 
 void setup()
 {
