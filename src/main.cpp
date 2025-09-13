@@ -16,7 +16,7 @@ const int DEBOUNCE_DELAY = 50;
 
 void setup()
 {
-  pinMode(IR_SENSOR_PIN, INPUT);
+  // pinMode(IR_SENSOR_PIN, INPUT);
   pinMode(ACTUATOR_FORWARD_PIN, OUTPUT);
   pinMode(ACTUATOR_BACKWARD_PIN, OUTPUT);
   pinMode(ACTUATOR_SPEED_PIN, OUTPUT);
@@ -25,6 +25,10 @@ void setup()
   Serial.println("Rat Trap System ready to kill, ah safely trap a rat");
 }
 
-bool trapActivatd = false;
-
-void loop() {}
+void loop()
+{
+  digitalWrite(ACTUATOR_FORWARD_PIN, HIGH);
+  digitalWrite(ACTUATOR_BACKWARD_PIN, LOW);
+  analogWrite(ACTUATOR_SPEED_PIN, 255); // Full speed; adjust 0-255
+  delay(2000);
+}
